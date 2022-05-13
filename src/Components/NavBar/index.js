@@ -9,19 +9,29 @@ import { IoLocationOutline } from "react-icons/io5";
 import Envios from "../Assets/NavBar/enviosGratis.jfif";
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsCart2 } from "react-icons/bs";
+
 const NavBar = () => {
   return (
     <>
-      <Container maxWidth="xl" style={{ backgroundColor: "#FFF159" }}>
+      <Container maxWidth style={{ backgroundColor: "#FFF159" }}>
         <Container>
-          <Grid container direction="row" paddingTop={0.2}>
-            <Grid item xs={1} marginTop={1} md={3} lg={3} xl={2.5} height={30}>
+          <Grid container direction="row">
+            <Grid
+              item
+              xs={1}
+              md={3}
+              lg={3}
+              xl={1}
+              height={35}
+              marginBottom={1}
+              marginTop={1.3}
+            >
               <Grid item>
                 <img src={LogoMeli} className="logoMeli"></img>
               </Grid>
             </Grid>
-            <Grid item xs={11} md={6} lg={6} xl={5.5}>
-              <Grid container="row" xs={10.8} className="formSearch">
+            <Grid item xs={11} md={6} lg={6} xl={7} marginTop={0.5}>
+              <Grid container="row" xs={10.7} className="formSearch">
                 <Grid xs={11}>
                   <input
                     type="text"
@@ -36,17 +46,15 @@ const NavBar = () => {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={11} md={3} lg={3} xl={4} height={30}>
+            <Grid item xs={11} md={3} lg={3} xl={4}>
               <img src={Envios} className="imgEnvios" />
             </Grid>
           </Grid>
-        </Container>
-        <Container>
           <Grid container direction="row" alignContent="end">
-            <Grid item xs={10} md={3} lg={3} xl={2.5}>
-              <Grid container="row" marginLeft={12}>
+            <Grid item xs={10} md={3} lg={3} xl={2.8}>
+              <Grid container="row">
                 <Grid xs={1}>
-                  <IoLocationOutline className="iconLocation" />
+                  <IoLocationOutline className="iconLocation"/>
                 </Grid>
                 <Grid xs={5}>
                   <p className="fontsend">Enviar a</p>
@@ -54,43 +62,43 @@ const NavBar = () => {
                 </Grid>
               </Grid>
             </Grid>
-            <Grid item xs={12} md={6} lg={6} xl={5.5}>
+            <Grid item xs={12} md={6} lg={6} xl={5} className="nav">
               <Grid container="row" marginTop={1.5}>
-                <Grid xs={1} marginLeft={2}>
+                <Grid xs={1}>
                   <p className="fontLink">Categorias</p>
                 </Grid>
-                <Grid xs={1} marginLeft={3}>
+                <Grid xs={1} marginLeft={5}>
                   <p className="fontLink">Ofertas</p>
                 </Grid>
-                <Grid xs={1} marginLeft={1}>
+                <Grid xs={1} marginLeft={3}>
                   <p className="fontLink">Historial</p>
                 </Grid>
-                <Grid xs={1} marginLeft={1}>
+                <Grid xs={1} marginLeft={3}>
                   <p className="fontLink">Supermercado</p>
                 </Grid>
-                <Grid xs={1} marginLeft={5}>
+                <Grid xs={1} marginLeft={8}>
                   <p className="fontLink">Moda</p>
                 </Grid>
                 <Grid xs={1} marginLeft={1}>
                   <p className="fontLink">Vender</p>
                 </Grid>
-                <Grid xs={1} marginLeft={1}>
+                <Grid xs={1} marginLeft={2}>
                   <p className="fontLink">Ayuda</p>
                 </Grid>
               </Grid>
             </Grid>
             <Grid item xs={11} md={3} lg={3} xl={4} height={40}>
-              <Grid container="row" marginTop={1.5}>
-                <Grid xs={3} className="fontLink text-end" marginLeft={2}>
-                  <p>Creá tu cuenta</p>
+              <Grid container="row" marginTop={1.5} className="sub-nav">
+                <Grid xs={3} marginLeft={10}>
+                  <p className="fontSubNav">Creá tu cuenta</p>
                 </Grid>
-                <Grid xs={2} className="fontLink text-center">
-                  <p>Ingresá</p>
+                <Grid xs={2} className="text-center">
+                  <p className="fontSubNav">Ingresá</p>
                 </Grid>
-                <Grid xs={2.5} className="fontLink">
-                  <p>Mis Compras</p>
+                <Grid xs={3} className="text-center">
+                  <p className="fontSubNav">Mis Compras</p>
                 </Grid>
-                <Grid xs={2} className="cartIcon">
+                <Grid xs={1} className="cartIcon text-end" marginTop={0.5}>
                   <BsCart2 />
                 </Grid>
               </Grid>

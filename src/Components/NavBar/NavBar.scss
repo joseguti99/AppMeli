@@ -5,8 +5,8 @@
 .formSearch{
     margin-top: 5px;
     background-color: #ffffff;
-    height: 31px;
-    margin-left: 10px;
+    height: 38px;
+    margin-left: 10%;
     box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.149);
 
     @media screen and (min-width: 350px) and (max-width: 992px){
@@ -16,18 +16,18 @@
   
 .inputSearch{
     width: 99%;
-    height: 20px;
+    height: 28px;
     border: none;
     margin-left: 10px;
     margin-top: 5px;
     border-right: 1px solid rgba(128, 128, 128, 0.244);
-
+    
     &:focus{
     outline: none;
     }
 
     &::placeholder{
-    font-size: 13px;
+    font-size: 15px;
     color: rgba(128, 128, 128, 0.339);
     margin-top: 10px;
     }
@@ -50,19 +50,20 @@
         margin-left: 1px;
     }
 }
-  
+
 .iconSearch{
-    font-size: 18px;
+    font-size: 22px;
     margin-top: 2px;
+    margin-left: 2px;
     color: rgba(128, 128, 128, 0.728);
     font-family: inherit;
 }
-  
+
 .imgEnvios{
     width: 272px;
     height: 31px;
-    margin-right: 20%;
-    margin-top: 6px;
+    margin-top: 10px;
+    margin-left: 15%;
 
     @media screen and (min-width: 350px) and (max-width: 992px){
         display: none;
@@ -70,35 +71,47 @@
 }
 
 .logoMeli{
-    width: 108px;
-    margin-left: 41%;
-
+    width: 135px;
+    position: relative;
+    right: 22px;
     @media screen and (min-width: 350px) and (max-width: 992px){
         margin-left: 0px;
     }
 }
 
 .iconLocation{
-    font-size: 22px;
+    font-size: 25px;
     color: gray;
+    position: relative;
+    right: 25px;
+    top: 3px;
 }
 
 .fontsend{
     margin-top: 3px;
-    font-size: 10px;
+    font-size: 13px;
     display: block;
     color: rgba(52, 51, 51, 0.646);
+    position: relative;
+    right: 20px;
 }
 
 .fontLocation{
     margin-bottom: 10px;
-    font-size: 10px;
+    font-size: 13px;
+    position: relative;
+    right: 20px;
+}
+
+.nav{
+    position: relative;
+    right: 105px;
 }
 
 .fontLink{
-    font-size: 11px;
+    font-size: 14px;
     margin-top: 5px;
-    color: rgba(0, 0, 0, 0.672);
+    color: rgba(0, 0, 0, 0.493);
     cursor: pointer;
 
     &:hover{
@@ -113,4 +126,16 @@
     &:hover{
         color: black;
     }
+}
+
+.sub-nav{
+    position: relative;
+    left: 35px;
+}
+
+.fontSubNav{
+    margin-top: 5px;
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
 }
