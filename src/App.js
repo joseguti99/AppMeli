@@ -7,7 +7,7 @@ import Detail from './Components/Detail';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter  basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route exact={true} path="/" element={<Home />} />
             <Route exact={true} path="/:id" element={<Detail/>}/>
