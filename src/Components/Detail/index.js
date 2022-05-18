@@ -85,7 +85,7 @@ const Detail = () => {
                 <img
                   className="imgDetail"
                   src={imageUrl ? imageUrl : `https://http2.mlstatic.com/D_NQ_NP_${item.thumbnail_id}-O.webp`}
-                ></img>
+                />
               </div>
             </Grid>
             <Grid item xs={3.5} marginTop={6}>
