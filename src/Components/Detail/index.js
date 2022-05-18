@@ -125,7 +125,7 @@ const Detail = () => {
             <Grid item xs={3.5}>
               <Grid xs={12} 
                     style={styleMenuCompra}>
-                    MENU
+                    MENU COMPRA
               </Grid>
             </Grid>
           </Grid>
