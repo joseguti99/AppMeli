@@ -9,6 +9,8 @@ const Detail = () => {
   const [pictures, setPictures] = useState("");
   const [review, setReview] = useState("");
   const [rating, setRating] = useState("");
+  const [imageUrl, setImageUrl] = useState("")
+  const [features, setFeatures] = useState("")
   const { id } = useParams();
 
   const fetchDatail = () => {
@@ -17,10 +19,10 @@ const Detail = () => {
       .then((res) => res.json())
       .then((data) => {
         setItem(data);
+        setFeatures(data.attributes.slice(0, 10))
         setPictures(data.pictures);
       })
       .catch((err) => console.log(err));
-
     const urlReview = `https://api.mercadolibre.com/reviews/item/${id}`;
     fetch(urlReview)
       .then((res) => res.json())
@@ -31,12 +33,25 @@ const Detail = () => {
       .catch((err) => console.log(err));
   };
 
+    const selectImageId = (url) => {
+      setImageUrl(url)
+    }
+
   useEffect(() => {
     fetchDatail();
   }, []);
 
   const numberFormat = new Intl.NumberFormat("es-ES");
-  console.log(item)
+
+  const styleMenuCompra = {
+    border: "1px solid gray", 
+    textAlign: "center", 
+    marginLeft: "10px", 
+    marginTop: "15px",
+    height: "100%",
+    borderRadius: "4px"
+  }
+
   return (
     <>
       <NavBar />
@@ -56,7 +71,9 @@ const Detail = () => {
               <div className="containerPicturesHover">
                 {pictures.length
                   ? pictures.map((data, index) => (
-                      <div className="containerImgHover" key={index}>
+                      <div className="containerImgHover" 
+                            key={index} 
+                            onMouseEnter={() => selectImageId(data.url)} >
                         <img src={data.url} className="ImgHover" />
                       </div>
                     ))
@@ -67,7 +84,7 @@ const Detail = () => {
               <div className="containerImgDetail">
                 <img
                   className="imgDetail"
-                  src={`https://http2.mlstatic.com/D_NQ_NP_${item.thumbnail_id}-O.webp`}
+                  src={imageUrl ? imageUrl : `https://http2.mlstatic.com/D_NQ_NP_${item.thumbnail_id}-O.webp`}
                 ></img>
               </div>
             </Grid>
@@ -95,12 +112,21 @@ const Detail = () => {
                 {<p className="fontOfPrice">$ {numberFormat.format(item.price)}</p>}
                 {<p className="fontPriceByPart">en 12x ${numberFormat.format(item.price / 12)} sin interes</p>}
               </div>
-              <div>
-                <p>Lo que tenés que saber de este producto</p>
-              </div>
+              <p className="mt-3">Lo que tenés que saber de este producto</p>
+              <ul>
+                {features.length ? features.map((data, index) =>
+                <li key={index}
+                    className="mt-1 ml-2">
+                      <p className="fontFeatures">{data.name} : {data.value_name}</p>
+                </li>)
+                :""}
+              </ul>
             </Grid>
             <Grid item xs={3.5}>
-              <p></p>
+              <Grid xs={12} 
+                    style={styleMenuCompra}>
+                    MENU
+              </Grid>
             </Grid>
           </Grid>
         </Container>
