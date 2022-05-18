@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/AppMeli/static/css/main.957ed1be.css",
-    "main.js": "/AppMeli/static/js/main.e2e0e04e.js",
+    "main.css": "/AppMeli/static/css/main.3dd7b6b4.css",
+    "main.js": "/AppMeli/static/js/main.f663a3e7.js",
     "static/js/787.40a5ab46.chunk.js": "/AppMeli/static/js/787.40a5ab46.chunk.js",
     "static/media/ProximaNova-Light.ttf": "/AppMeli/static/media/ProximaNova-Light.8a5b5fb54b245b249499.ttf",
     "static/media/promoTelevisores.jfif": "/AppMeli/static/media/promoTelevisores.7ec0fc6f8b953f41f833.jfif",
@@ -13,12 +13,12 @@
     "static/media/credit-card.svg": "/AppMeli/static/media/credit-card.42b7ec76b569bc3fd561943824694c05.svg",
     "index.html": "/AppMeli/index.html",
     "static/media/view-more.svg": "/AppMeli/static/media/view-more.8fb0b7ee103b42132b036a37655e2559.svg",
-    "main.957ed1be.css.map": "/AppMeli/static/css/main.957ed1be.css.map",
-    "main.e2e0e04e.js.map": "/AppMeli/static/js/main.e2e0e04e.js.map",
+    "main.3dd7b6b4.css.map": "/AppMeli/static/css/main.3dd7b6b4.css.map",
+    "main.f663a3e7.js.map": "/AppMeli/static/js/main.f663a3e7.js.map",
     "787.40a5ab46.chunk.js.map": "/AppMeli/static/js/787.40a5ab46.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.957ed1be.css",
-    "static/js/main.e2e0e04e.js"
+    "static/css/main.3dd7b6b4.css",
+    "static/js/main.f663a3e7.js"
   ]
 }
